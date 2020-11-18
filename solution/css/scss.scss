@@ -1,0 +1,226 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  padding: 1rem 0;
+  transition: background 1s ease-in-out;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #000000;
+  text-shadow: 0 0 6px #ffffff;
+}
+
+.time {
+  width: 33rem;
+  font-size: 8rem;
+}
+.date{
+  font-size: 2rem;
+  text-align: left;
+}
+.day{
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+}
+
+.controlBg{
+  width: 3.3rem;
+  height: 3.3rem;
+  background:rgba(255, 237, 189, 0.5);
+  transition: all 1.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  border:1px solid #FFA670;
+}
+.controlBg:hover{
+  background-color: #FFA670;
+  transform: rotate(180deg);
+}
+.controlBg img{
+  width: 2rem;
+  transition: all 1.5s ease;
+}
+
+.quote{
+  padding: 10px;
+  margin-top: 1rem;
+  width: 35rem;
+  transition: all 1.5s ease;
+  font-family: 'Indie Flower', cursive;
+  font-weight: normal;
+  font-size: 1.6rem;
+  color: black;
+  border-radius: 40px 40px 40px 0;
+  background:rgba(255, 237, 189, 0.5);
+  text-shadow: none;
+}
+.nextQuote{
+  display: flex;
+  justify-content: space-between;
+}
+.quote__author{
+  text-align: right;
+  text-shadow: none;
+  margin-right: 2rem;
+}
+.quote__button{
+  font-size: 1.3rem;
+  text-decoration: underline;
+  font-family: inherit;
+  border: none;
+  background: inherit;
+  margin-left: 1rem;
+}
+.quote__button:focus{
+  outline: none;
+}
+
+.weather{
+  margin-top: 1rem;
+  width: 35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.city{
+  width: 10rem;
+}
+.weather__title{
+  margin-top: 1rem;
+}
+.info{
+  margin-top: 0.5rem;
+  display: flex;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  background:rgba(255, 237, 189, 0.5);
+  width: 23rem;
+  justify-content: center;
+  align-items: center;
+}
+.temperature{
+  margin: 0 1rem;
+}
+.weather-description{
+  margin-right: 1rem;
+}
+.wind{
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 768px) and (max-width: 773px){
+  .controlBg{
+    top: 7px;
+    left: 7px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .day {
+    flex-direction: column;
+    time.time {
+      font-size: 6rem;
+    }
+    .date {
+      font-size: 1.7rem;
+      text-align: center;
+    }
+  }
+
+  h1{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 599px){
+  .quote{
+    width: 25rem;
+  }
+  .weather{
+    width: 25rem;
+  }
+  .time{
+    width: 25rem;
+  }
+  .controlBg{
+    width: 2.3rem;
+    height: 2.3rem;
+
+    img{
+      width: 1.2rem;
+    }
+  }
+}
+@media screen and (max-width: 459px){
+  body{
+    padding-top: 2rem;
+  }
+  .day {
+    time.time {
+      font-size: 4rem;
+    }
+    .date {
+      font-size: 1.3rem;
+      text-align: center;
+    }
+  }
+
+  h1{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+  h2{
+    width: 18rem;
+    font-size: 1.5rem;
+  }
+  .quote{
+    width: 18rem;
+    p.quote__text{
+      font-size: 1.2rem;
+    }
+    .quote__author{
+      font-size: 1.2rem;
+    }
+  }
+  .weather{
+    width: 18rem;
+    .info{
+      width: 18rem;
+    }
+  }
+  .time{
+    width: 18rem;
+  }
+  .weather-description{
+    font-size: 1.2rem;
+  }
+  .controlBg{
+    top: 7px;
+    left: 7px;
+  }
+}
